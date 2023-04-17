@@ -5,8 +5,7 @@ import com.capstoneproject.Empower.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,5 +21,13 @@ public class CategoryController {
     }
 
     @GetMapping(value = "/categories/{id}")
-    public ResponseEntity<List>
+    public ResponseEntity getCategory(@PathVariable Long id){
+        return new ResponseEntity<>(categoryRepository.findById(id), HttpStatus.ACCEPTED);
+    }
+
+    @PostMapping(value = "/categories")
+    public ResponseEntity<Category> createCategory(@RequestBody Category category){
+        categoryRepository.save(category);
+        return new ResponseEntity<>(category, HttpStatus.ACCEPTED);
+    }
 }
