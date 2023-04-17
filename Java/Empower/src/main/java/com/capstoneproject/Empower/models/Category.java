@@ -19,8 +19,8 @@ public class Category {
     @Column(name = "title")
     private String title;
 
-    @JsonIgnoreProperties({"categories"})
-    @OneToMany(mappedBy = "categories")
+    @JsonIgnoreProperties({"category"})
+    @OneToMany(mappedBy = "category")
     private List<Affirmation> affirmations;
 
     public Category(String title){
