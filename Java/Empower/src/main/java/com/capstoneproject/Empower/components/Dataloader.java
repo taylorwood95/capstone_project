@@ -3,9 +3,11 @@ package com.capstoneproject.Empower.components;
 import com.capstoneproject.Empower.models.Affirmation;
 import com.capstoneproject.Empower.models.AffirmationComment;
 import com.capstoneproject.Empower.models.Category;
+import com.capstoneproject.Empower.models.Forum;
 import com.capstoneproject.Empower.repository.AffirmationCommentRepository;
 import com.capstoneproject.Empower.repository.AffirmationRepository;
 import com.capstoneproject.Empower.repository.CategoryRepository;
+import com.capstoneproject.Empower.repository.ForumRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -21,6 +23,9 @@ public class Dataloader implements ApplicationRunner {
     AffirmationCommentRepository affirmationCommentRepository;
     @Autowired
     AffirmationRepository affirmationRepository;
+
+    @Autowired
+    ForumRepository forumRepository;
 
 
     public Dataloader() {
@@ -41,6 +46,12 @@ public class Dataloader implements ApplicationRunner {
 
         AffirmationComment affirmationComment =  new AffirmationComment("This really helped", affirmation1);
         affirmationCommentRepository.save(affirmationComment);
+
+        Forum forum1 = new Forum("This helped a lot !");
+        forumRepository.save(forum1);
+
+        Forum forum2 = new Forum("This was shite !");
+        forumRepository.save(forum2);
 
 
 
