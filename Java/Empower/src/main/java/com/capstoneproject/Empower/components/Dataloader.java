@@ -1,4 +1,37 @@
 package com.capstoneproject.Empower.components;
 
-public class Dataloader {
+import com.capstoneproject.Empower.models.Category;
+import com.capstoneproject.Empower.repository.AffirmationCommentRepository;
+import com.capstoneproject.Empower.repository.AffirmationRepository;
+import com.capstoneproject.Empower.repository.CategoryRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Dataloader implements ApplicationRunner {
+
+    @Autowired
+    CategoryRepository categoryRepository;
+
+    @Autowired
+    AffirmationCommentRepository affirmationCommentRepository;
+    @Autowired
+    AffirmationRepository affirmationRepository;
+
+
+    public Dataloader() {
+
+    }
+    public void run(ApplicationArguments args)  {
+
+        Category journey = new Category("Journey");
+        categoryRepository.save(journey);
+
+
+
+
+
+    }
 }
