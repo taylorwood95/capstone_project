@@ -49,4 +49,6 @@ class EmpowerApplicationTests {
 		assertEquals("Here we go", affirmationComment.getComment());
 	}
 
+
+
 }

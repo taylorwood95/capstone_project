@@ -1,5 +1,6 @@
 package com.capstoneproject.Empower.components;
 
+import com.capstoneproject.Empower.models.Affirmation;
 import com.capstoneproject.Empower.models.Category;
 import com.capstoneproject.Empower.repository.AffirmationCommentRepository;
 import com.capstoneproject.Empower.repository.AffirmationRepository;
@@ -28,6 +29,14 @@ public class Dataloader implements ApplicationRunner {
 
         Category journey = new Category("Journey");
         categoryRepository.save(journey);
+
+
+
+        Affirmation affirmation1 = new Affirmation("Be hopeful for everything", journey );
+        affirmationRepository.save(affirmation1);
+
+        Affirmation affirmation2 = new Affirmation("Stop comparing yerself to others", journey);
+        affirmationRepository.save(affirmation2);
 
 
 
