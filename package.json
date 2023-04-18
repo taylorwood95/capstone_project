@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "global": "^4.4.0",
+    "nodemon": "^2.0.22"
+  }
+}

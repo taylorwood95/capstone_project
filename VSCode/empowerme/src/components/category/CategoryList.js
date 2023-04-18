@@ -1,9 +1,17 @@
 import React from 'react'
+import CategoryDetail from './CategoryDetail'
 
-const CategoryList = () => {
+const CategoryList = ({categories, onCategoryClick}) => {
+    const allCategories = categories.map ((category, index) => {
+        return <CategoryDetail key={index} category={category}/>
+    })
+
+
     return (
     <div>
-        CategoryList
+        <ul>
+            {allCategories}
+        </ul>
     </div>
     )
 }
