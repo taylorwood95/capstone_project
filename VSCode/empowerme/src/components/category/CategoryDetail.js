@@ -9,10 +9,9 @@ const CategoryDetail = ({category, onCategoryClick}) => {
     return (
     <div>
     <li>{category.title}</li>
-    <li>{category.affirmations[0].affirmation}</li>
     <button onClick={handleClick}>Select</button>
     </div>
     )
 }
 
-export default CategoryDetail
+export default CategoryDetail;

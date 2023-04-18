@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import CategoryList from '../components/category/CategoryList';
+import Category from '../components/category/Category';
 
 const CategoryContainer = () => {
     const url = "http://localhost:8080/api/categories"
@@ -10,7 +11,6 @@ const CategoryContainer = () => {
         fetch(url)
         .then(results => results.json())
         .then(categoryData => setCategories(categoryData))
-        console.log(categories);
     }
 
     useEffect(() => {
@@ -18,12 +18,17 @@ const CategoryContainer = () => {
     },[])
 
     const onCategoryClick = (category) => {
+
         setSelectedCategory(category);
     }
 
     return (
     <div>
-        <CategoryList categories={categories}/>
+
+        <CategoryList categories={categories} onCategoryClick={onCategoryClick}/>
+        <div>
+            {selectedCategory ? <Category categories={categories} category={selectedCategory}/> : null}
+        </div>
     </div>
     )
 }
