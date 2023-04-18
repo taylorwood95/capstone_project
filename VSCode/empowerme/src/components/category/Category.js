@@ -8,7 +8,10 @@ const Category = ({categories}) => {
 
     return (
     <div>
+
         <ul>{affList}</ul>
+        <input type='text'/>
+        <button>add</button>
 
     </div>
     )
