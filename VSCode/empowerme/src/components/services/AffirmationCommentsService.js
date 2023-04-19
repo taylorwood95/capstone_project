@@ -1,12 +1,12 @@
 const baseURL = 'http://localhost:8080/api/affirmationsComments'
 
 const AffirmationsCommentService =  {
-  getBookings() {
+  getAffirmationComments() {
     return fetch(baseURL)
       .then(res => res.json());
   },
 
-  addBooking(affirmationComment) {
+  addAffirmationComment(affirmationComment) {
     return fetch(baseURL, {
       method: 'POST',
       body: JSON.stringify(affirmationComment),
@@ -17,7 +17,7 @@ const AffirmationsCommentService =  {
       .then(res => res.json());
   },
 
-  updateBooking(affirmationComment) {
+  updateAffirmationComment(affirmationComment) {
     return fetch(baseURL + affirmationComment.id, {
       method: 'PUT',
       body: JSON.stringify(affirmationComment),
@@ -28,7 +28,7 @@ const AffirmationsCommentService =  {
       .then(res => res.json());
   },
 
-  deleteBooking(id) {
+  deleteAffirmationComment(id) {
     return fetch(baseURL + id, {
       method: 'DELETE'
     });
