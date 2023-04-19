@@ -15,6 +15,9 @@ const NavBar = () => {
                 <Link to = "/news">Explore</Link>
             </li>
             <li>
+                <Link to="/calender">Calender</Link>
+            </li>
+            <li>
                 <Link to = "/forum">Forum</Link>
             </li>
             
