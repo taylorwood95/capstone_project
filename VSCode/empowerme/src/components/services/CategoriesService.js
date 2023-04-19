@@ -1,12 +1,12 @@
 const baseURL = 'http://localhost:8080/api/categories'
 
 const CategoryService =  {
-  getBookings() {
+  getCategories() {
     return fetch(baseURL)
       .then(res => res.json());
   },
 
-  addBooking(category) {
+  addCategory(category) {
     return fetch(baseURL, {
       method: 'POST',
       body: JSON.stringify(category),
@@ -17,7 +17,7 @@ const CategoryService =  {
       .then(res => res.json());
   },
 
-  updateBooking(category) {
+  updateCategory(category) {
     return fetch(baseURL + category.id, {
       method: 'PUT',
       body: JSON.stringify(category),
@@ -28,7 +28,7 @@ const CategoryService =  {
       .then(res => res.json());
   },
 
-  deleteBooking(id) {
+  deleteCategory(id) {
     return fetch(baseURL + id, {
       method: 'DELETE'
     });

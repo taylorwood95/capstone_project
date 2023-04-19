@@ -1,12 +1,12 @@
 const baseURL = 'http://localhost:8080/api/forum'
 
 const ForumService =  {
-  getBookings() {
+  getPosts() {
     return fetch(baseURL)
       .then(res => res.json());
   },
 
-  addBooking(forum) {
+  addPost(forum) {
     return fetch(baseURL, {
       method: 'POST',
       body: JSON.stringify(forum),
@@ -17,7 +17,7 @@ const ForumService =  {
       .then(res => res.json());
   },
 
-  updateBooking(forum) {
+  updatePost(forum) {
     return fetch(baseURL + forum.id, {
       method: 'PUT',
       body: JSON.stringify(forum),
@@ -28,7 +28,7 @@ const ForumService =  {
       .then(res => res.json());
   },
 
-  deleteBooking(id) {
+  deletePost(id) {
     return fetch(baseURL + id, {
       method: 'DELETE'
     });
