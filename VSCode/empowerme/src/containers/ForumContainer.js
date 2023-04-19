@@ -1,9 +1,30 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import ForumList from '../components/forum/ForumList';
+
 
 const ForumContainer = () => {
+
+    const url = "http://localhost:8080/api/forum"
+    const [forum, setForum] = useState([])
+
+    const getForum = () => {
+      fetch(url)
+      .then(results => results.json())
+      .then(forumData => setForum(forumData))
+    };
+
+    useEffect (() => {
+      getForum();
+    },[]);
+
+
+
+
     return (
+
     <div>
-        <p>the container of forumings</p>
+        <ForumList forum = {forum}/>
+        
     </div>
     )
 };
