@@ -11,9 +11,9 @@ const CategoryDetail = ({category, onCategoryClick}) => {
     return (
     <div>
     <li>{category.title}</li>
-    <Link to="/affirmations-list">
+    {/* <Link to="/affirmations-list"> */}
     <button onClick={handleClick}>Select</button>
-    </Link>
+    {/* </Link> */}
     </div>
     )
 }

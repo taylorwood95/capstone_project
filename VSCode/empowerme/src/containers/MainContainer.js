@@ -5,7 +5,7 @@ import Home from '../components/Home';
 import CategoryContainer from './CategoryContainer';
 import NewsContainer from './NewsContainer';
 import ForumContainer from './ForumContainer';
-import AffirmationsContainer from './AffirmationsContainer';
+// import AffirmationsContainer from './AffirmationsContainer';
 
 
 
@@ -19,7 +19,7 @@ const MainContainer = () => {
                 <Route path = "/affirmations" element = {<CategoryContainer/>}/>
                 <Route path = "/news" element = {<NewsContainer/>}/>
                 <Route path = "/forum" element = {<ForumContainer/>}/>
-                <Route path = "/affirmations-list" element = {<AffirmationsContainer/>}/>
+                {/* <Route path = "/affirmations-list" element = {<AffirmationsContainer/>}/> */}
             </Routes>  
 
         </Router>

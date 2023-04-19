@@ -3,14 +3,16 @@ import React from 'react'
 const Category = ({categories}) => {
     
     const affList = categories[0].affirmations.map((affirmation, index)=>{
-        return affirmation.affirmation
+        return <li>{affirmation.affirmation}
+        <input type="text"/></li>
     });
 
     return (
     <div>
 
-        <ul>{affList}</ul>
-        <input type='text'/>
+        <ul>{affList}
+    </ul>
+        
         <button>add</button>
 
     </div>
