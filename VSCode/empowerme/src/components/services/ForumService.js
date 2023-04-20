@@ -1,5 +1,7 @@
 const baseURL = 'http://localhost:8080/api/forum'
 
+
+
 const ForumService =  {
   getPosts() {
     return fetch(baseURL)
