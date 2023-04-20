@@ -11,6 +11,7 @@ const Category = ({categories}) => {
     <div>
 
         <ul>{affList}
+        Category List
     </ul>
         
         <button>add</button>
