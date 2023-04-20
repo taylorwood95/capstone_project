@@ -1,4 +1,4 @@
-const baseURL = 'http://localhost:8080/api/categories'
+const baseURL = '/api/categories'
 
 const CategoryService =  {
   getCategories() {
@@ -7,6 +7,7 @@ const CategoryService =  {
   },
 
   addCategory(category) {
+     console.log("here!")
     return fetch(baseURL, {
       method: 'POST',
       body: JSON.stringify(category),

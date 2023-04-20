@@ -10,6 +10,7 @@ const CategoryList = ({categories, onCategoryClick}) => {
     return (
     <div>
         <ul>
+            <p>Category List </p>
             {allCategories}
         </ul>
     </div>
